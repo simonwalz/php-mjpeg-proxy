@@ -32,7 +32,8 @@ if ($fp) {
 	fpassthru($fp);
 	fclose($fp);
 } else {
-	// no error, send alternative picture:
+	// error: webcam probably offline
+	// send alternative picture:
 	$d = file_get_contents("webcam_offline.jpg");
 
 	Header("Content-Type: image/jpeg");
