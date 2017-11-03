@@ -1,0 +1,22 @@
+<html>
+<head>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+
+<script>
+function webcamerror(image) {
+	jQuery(image).hide();
+	jQuery("#webcamerrormessage").show();
+}
+</script>
+
+<img class="media mediacenter" src="proxy_mjpeg_error.php" onerror="webcamerror(this);" alt="loading ..."/>
+
+<p id="webcamerrormessage" style="display: none;"><b>
+	The requested webstream is temporary anavailable. Try again later.
+</b></p>
+
+</body>
+</html>
+
